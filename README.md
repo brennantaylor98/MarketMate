@@ -7,7 +7,7 @@ To ensure a safe and reliable experience, the BuySell app integrates with popula
 
 The app is built with cutting-edge technologies like React, GraphQL, and MongoDB, making it fast, responsive, and scalable. With its clean and modern design, the MarketMate app is a great choice for anyone looking to buy or sell goods and services online.
 
-[Video Demo]()
+[Wireframe](https://excalidraw.com/#room=00d166a40614151dbeea,e9HXBJ32S6rvES-Bk0i1LQ)
 
 ## Table of Contents
 1.  [Title](#title)
@@ -17,6 +17,7 @@ The app is built with cutting-edge technologies like React, GraphQL, and MongoDB
 5.  [License](#license)
 6.  [Contributing](#contributing)
 7.  [Questions](#questions)
+
 
 ## Installation
 
