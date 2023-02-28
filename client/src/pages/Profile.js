@@ -30,13 +30,13 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <main style={{ paddingTop: '100px' }}></main>
+    <div style= {{ height:'500px' }}>
+      <main style={{ paddingTop: '100px' }}>
       <h2>Recently Liked Items</h2>
       <div style={{border: '1px dotted black', padding: '150px'}}>
-       
       </div>
-      <main style={{ paddingTop: '100px' }}></main>
+      </main>
+      <main style={{ paddingTop: '100px' }}>
       <h2>Selling</h2>
     <div style={{ border: '1px dotted black', padding: '150px'}}>
     <Link to="/new-route" className="floating-button">
@@ -44,6 +44,7 @@ const Profile = () => {
         Post
       </Link>
     </div>
+    </main>
   </div>
 
   

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-<div className="position-relative">
+<div className="">
       <div className="container-fluid bg-light position-absolute bottom-0"></div>
       <div className="container-fluid bg-light">
         <div className="row justify-content-center"> <main style={{ Top: '100px' }}></main>
