@@ -90,7 +90,7 @@ const Home = () => {
         </div>
       </div>
       
-      <Link to="/new-route" className="floating-button">
+      <Link to="/createPost" className="floating-button">
         Create <br />
         Post
       </Link>
