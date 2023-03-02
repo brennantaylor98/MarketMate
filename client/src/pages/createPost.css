@@ -1,0 +1,32 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form {
+    background: linear-gradient(#e66465, #9198e5);
+    margin-top: 120px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 500px;
+}
+
+.form input {
+    width: 300px;
+    padding: 10px;
+}
+
+.form textarea {
+    width: 300px;
+    padding: 10px;
+}
+
+.form button:hover {
+    cursor: pointer;
+    color: #eb0000;
+    border: 2px solid white;
+}
+
