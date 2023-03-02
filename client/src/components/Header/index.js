@@ -19,27 +19,6 @@ const Header = () => {
           <p className="m-0" style={{ fontFamily: 'Monaco', fontSize: '18px', color: 'white' }}>Buy & Sell Today</p>
         </div>
       </div>
-        <div>
-        {Auth.loggedIn() ? (
-      <>
-        <Link className="btn btn-sm btn-primary m-2" to="/me" style={{ backgroundColor: '#4f86f7' }}>
-  {Auth.getProfile().data.username}'s profile
-</Link>
-        <button className="btn btn-sm btn-light m-2" onClick={logout}style={{ backgroundColor: '#ffffff' }}>
-          Logout
-        </button>
-      </>
-    ) : (
-      <>
-        <Link className="btn btn-sm btn-info m-2" to="/login">
-          Login
-        </Link>
-        <Link className="btn btn-sm btn-light m-2" to="/signup">
-          Signup
-        </Link>
-            </>
-          )}
-        </div>
     </header>
   );
 };

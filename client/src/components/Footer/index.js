@@ -1,41 +1,72 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 const Footer = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const location = useLocation();
+
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
+  const getClassNameForLink = (path) => {
+    return location.pathname === path ? 'btn btn-outline-secondary active' : 'btn btn-outline-secondary';
+  };
+
   return (
-<div className="">
-      <div className="container-fluid bg-light position-absolute bottom-0"></div>
-      <div className="container-fluid bg-light">
-        <div className="row justify-content-center"> <main style={{ Top: '100px' }}></main>
-
-        <div className="col-3">
-                  <Link to="/" className="btn btn-outline-secondary btn-block">
-                   home
-                  </Link>
+    <div className="footer-wrapper">
+      <div className="footer-container fixed-bottom">
+        <div className="container-fluid bg-hidden">
+          <div className="row justify-content-center">
+            <div className="col-3">
+              <Link to="/" className={getClassNameForLink('/')}>
+                home
+              </Link>
             </div>
-
-          <div className="col-3">
-            <button type="button" className="btn btn-outline-secondary btn-block">Inbox</button>
-          </div>
-          
-          <div className="col-3 dropdown">
-            <div className="dropup">
-              <button className="btn btn-outline-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Profile
-              </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="me">Recently Viewed</a> <br />
-                <a className="dropdown-item" href="me">Selling</a>
-              </div>
-            </div>
-          </div>
 
             <div className="col-3">
-                  <Link to="/login" className="btn btn-outline-secondary btn-block">
-                   Login
-                  </Link>
+              <button type="button" className={getClassNameForLink('/inbox')}>
+                Inbox
+              </button>
             </div>
+
+            <div className="col-3 dropdown">
+              <div className="dropup">
+                <button
+                  className={getClassNameForLink('/me')}
+                  type="button"
+                  id="dropdownMenuButton"
+                  onClick={handleDropdownClick}
+                >
+                  <Link to="/me" style={{ color: 'black' }}>
+                    profile
+                  </Link>
+                </button>
+              </div>
+            </div>
+
+            <div className="col-3">
+              {Auth.loggedIn() ? (
+                <>
+                  <button className={getClassNameForLink('/logout')} onClick={logout}>
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link to="/login" className={getClassNameForLink('/login')}>
+                    Login
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,10 +74,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-
-
-

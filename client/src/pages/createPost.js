@@ -10,6 +10,30 @@ function CreatePost() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+  
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('price', price);
+    formData.append('location', location);
+    formData.append('category', category);
+    formData.append('image', image);
+  
+    fetch('/api/posts', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Post created successfully');
+          // Optionally redirect to homepage or clear form
+        } else {
+          console.error('Error creating post');
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (

@@ -5,6 +5,7 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 
+
 const Profile = () => {
   const { username: userParam } = useParams();
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
@@ -23,23 +24,24 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
-        You need to log in
-      </h4>
+      <div style={{ border: '2px solid black', textAlign: 'center', marginTop: '50vh' }}>
+        <h1>You need to log in to see this shit</h1>
+      </div>
     );
   }
+
 
   return (
     <div style= {{ height:'500px' }}>
       <main style={{ paddingTop: '100px' }}>
       <h2>Recently Liked Items</h2>
-      <div style={{border: '1px dotted black', padding: '150px'}}>
+      <div style={{border: '1px solid black', padding: '150px'}}>
       </div>
       </main>
       <main style={{ paddingTop: '100px' }}>
       <h2>Selling</h2>
-    <div style={{ border: '1px dotted black', padding: '150px'}}>
-    <Link to="/new-route" className="floating-button">
+    <div style={{ border: '1px solid black', padding: '150px'}}>
+    <Link to="/createpost" className="floating-button">
         Create <br />
         Post
       </Link>

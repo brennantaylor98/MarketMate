@@ -9,7 +9,6 @@ const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
- 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -18,7 +17,6 @@ const Login = (props) => {
       [name]: value,
     });
   };
-
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -33,7 +31,6 @@ const Login = (props) => {
       console.error(e);
     }
 
-   
     setFormState({
       email: '',
       password: '',
@@ -41,54 +38,55 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-      <main style={{ paddingTop: '100px' }}></main>
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Seller@gmail.com"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
+    <div className="container d-flex justify-content-center align-items-center" style={{ height: "500px", marginTop: "25%" }}>
+      <div className="card">
+        <h4 className="card-header bg-black text-light p-2">Login</h4>
+        <div className="card-body">
+          {data ? (
+            <p>
+              Success! You may now head{' '}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className="form-input"
+                placeholder="Seller@gmail.com"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block bg-black text-white"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                Login
+                  Login
                 </button>
-              </form>
-            )}
+                <div className="mt-3 text-center">
+                <span>Don't have an account? <br></br> </span>
+                <Link to="/signup" className="btn btn-link" style={{color: "white", backgroundColor: 'black'}}>Register</Link>
+                </div>
+            </form>
+          )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
+          {error && (
+            <div className="my-3 p-3 bg-danger text-white">
+              {error.message}
+            </div>
+          )}
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
