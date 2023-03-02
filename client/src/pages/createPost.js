@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./createPost.css"
 
 function CreatePost() {
   const [title, setTitle] = useState('');
@@ -38,65 +39,64 @@ function CreatePost() {
 
   return (
     <div className="container">
-      <h2>Create a New Post</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
+        <h2>Create a New Post</h2>
         <div className="form-group">
-          <label htmlFor="title">Title:</label>
           <input
             type="text"
             className="form-control"
             id="title"
+            placeholder='Title'
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Description:</label>
           <textarea
             className="form-control"
             id="description"
             rows="5"
+            placeholder='Description'
             value={description}
             onChange={(event) => setDescription(event.target.value)}
             required
           ></textarea>
         </div>
         <div className="form-group">
-          <label htmlFor="price">Price:</label>
           <input
             type="number"
             className="form-control"
             id="price"
+            placeholder='Price'
             value={price}
             onChange={(event) => setPrice(event.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="location">Location:</label>
           <input
             type="text"
             className="form-control"
             id="location"
+            placeholder='Location'
             value={location}
             onChange={(event) => setLocation(event.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="category">Category:</label>
           <input
             type="text"
             className="form-control"
             id="category"
+            placeholder='Category'
             value={category}
             onChange={(event) => setCategory(event.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="image">Image:</label>
           <input
             type="file"
             className="form-control-file"
@@ -106,7 +106,7 @@ function CreatePost() {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          Create Post ✅
         </button>
       </form>
     </div>

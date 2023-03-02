@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="row justify-content-center">
             <div className="col-3">
               <Link to="/" className={getClassNameForLink('/')}>
-                home
+                Home
               </Link>
             </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                   onClick={handleDropdownClick}
                 >
                   <Link to="/me" style={{ color: 'black' }}>
-                    profile
+                    Profile
                   </Link>
                 </button>
               </div>
