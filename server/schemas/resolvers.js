@@ -1,43 +1,55 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require("apollo-server-express");
+const { User, Post } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
-  Query: {
-    me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
-        return userData;
-      }
-      throw new AuthenticationError('Not logged in');
-    },
-  },
-  
-  Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
-      const token = signToken(user);
-      return { token, user };
-    },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+	Query: {
+		getPosts: async () => {
+			const posts = await Post.find();
+			return posts;
+		},
 
-      if (!user) {
-        throw new AuthenticationError('No user found with this email address');
-      }
+		me: async (parent, args, context) => {
+			if (context.user) {
+				const userData = await User.findOne({ _id: context.user._id }).select(
+					"-__v -password"
+				);
+				return userData;
+			}
+			throw new AuthenticationError("Not logged in");
+		},
+	},
 
-      const correctPw = await user.isCorrectPassword(password);
+	Mutation: {
+		createPost: async (parent, { title, price }, { Post }) => {
+			const newPost = new Post({ title, price });
+			await newPost.save();
+			return newPost;
+		},
 
-      if (!correctPw) {
-        throw new AuthenticationError('wrong');
-      }
+		addUser: async (parent, { username, email, password }) => {
+			const user = await User.create({ username, email, password });
+			const token = signToken(user);
+			return { token, user };
+		},
+		login: async (parent, { email, password }) => {
+			const user = await User.findOne({ email });
 
-      const token = signToken(user);
+			if (!user) {
+				throw new AuthenticationError("No user found with this email address");
+			}
 
-      return { token, user };
-    },
-    
-    },
-  };
+			const correctPw = await user.isCorrectPassword(password);
+
+			if (!correctPw) {
+				throw new AuthenticationError("wrong");
+			}
+
+			const token = signToken(user);
+
+			return { token, user };
+		},
+	},
+};
 
 module.exports = resolvers;

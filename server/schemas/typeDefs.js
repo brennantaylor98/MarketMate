@@ -1,27 +1,54 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
+const { GraphQLScalarType } = require("graphql");
+
+const NumberScalar = new GraphQLScalarType({
+	name: "Number",
+	serialize(value) {
+		if (typeof value !== "number") {
+			throw new Error("Value must be a number");
+		}
+		return value;
+	},
+	parseValue(value) {
+		if (typeof value !== "number") {
+			throw new Error("Value must be a number");
+		}
+		return value;
+	},
+});
+
+module.exports = NumberScalar;
 
 const typeDefs = gql`
-  type User {
-    _id: ID
-    username: String
-    email: String
-    password: String
-  }
+	scalar Number
+	type Post {
+		_id: ID!
+		title: String!
+		price: Number!
+	}
 
-  type Auth {
-    token: ID!
-    user: User
-  }
+	type User {
+		_id: ID
+		username: String
+		email: String
+		password: String
+	}
 
- type Query {
-  me:User
- }
+	type Auth {
+		token: ID!
+		user: User
+	}
 
+	type Query {
+		getPosts: [Post]!
+		me: User
+	}
 
-  type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-  }
+	type Mutation {
+		createPost(title: String!, price: Number!): Post!
+		addUser(username: String!, email: String!, password: String!): Auth
+		login(email: String!, password: String!): Auth
+	}
 `;
 
 module.exports = typeDefs;
