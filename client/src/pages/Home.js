@@ -21,17 +21,57 @@ const Home = () => {
 		console.log("posts", posts);
 	}, []);
 
+
+
 	return (
 		<>
+	<div className="catagoryText">
+		<h1> Catagories:</h1>
+		<Link to="/category/clothing" style={{ color: "black"  }}>
+                Clothing
+              </Link>| 
+			  <Link to="/category/garden" style={{ color: "black" }}>
+                Garden
+              </Link>| 
+			  <Link to="/category/electronics" style={{ color: "black" }}>
+                Electronics
+              </Link>|
+			  <Link to="/category/toys" style={{ color: "black" }}>
+                Toys
+              </Link>|
+			  <Link to="/category/pet-supplies" style={{ color: "black" }}>
+                Pet Supplies
+              </Link>|
+			  <Link to="/category/kids" style={{ color: "black" }}>
+                Kids
+              </Link>|
+			  <Link to="/category/vehicles" style={{ color: "black" }}>
+                Vehicles
+              </Link>|
+			  <Link to="/category/health" style={{ color: "black" }}>
+                Health
+              </Link>|
+			  <Link to="/category/tickets" style={{ color: "black" }}>
+                Tickets
+              </Link>|
+			  <Link to="/category/hobbies" style={{ color: "black" }}>
+                Hobbies
+              </Link>|
+			  <Link to="/category/other" style={{ color: "black" }}>
+                Other
+              </Link>
+
+
 			<div
+			
 				className="posts-container"
 				style={{
-					marginTop: "150px",
+					marginTop: "25px",
 					height: "calc(100vh - 300px)",
 					marginBottom: "150px",
 					border: "0px solid black",
 					overflowY: "scroll",
-					width: "5000px",
+					width: "1500px",
 					maxWidth: "100%",
 				}}
 			>
@@ -48,17 +88,7 @@ const Home = () => {
 					Post
 				</Link>
 			</div>
-			{/* <div className="container mt-4">
-				<h2>All Posts</h2>
-				<ul className="list-group">
-					{posts.map((post) => (
-						<li key={post._id} className="list-group-item">
-							<h4 className="text-black">{post.title}</h4>
-							<p style={{ color: "black" }}>Price: {post.price}</p>
-						</li>
-					))}
-				</ul>
-			</div> */}
+		</div>
 		</>
 	);
 };
