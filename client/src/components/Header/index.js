@@ -10,17 +10,20 @@ const Header = () => {
   };
   
   return (
-    <header className="bg-black text-light mb-4 py-0 flex-row align-center" style={{position: 'fixed', top: 0, left: 0, right: 0}}>
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+<header className="bg-black text-light mb-4 py-0" style={{ paddingLeft: '25px', position: 'fixed', top: 0, left: 0, right: 0 }}>
         <div className="mr-auto">
           <Link className="text-blue" to="/">
             <h1 className="m-0" style={{ fontFamily: 'Monospace', fontSize: '48px', fontWeight: 'bold' }}>MarketMate</h1>
           </Link>
           <p className="m-0" style={{ fontFamily: 'Monaco', fontSize: '18px', color: 'white' }}>Buy & Sell Today</p>
         </div>
-      </div>
     </header>
+
+
+
+
   );
 };
+
 
 export default Header;

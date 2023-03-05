@@ -29,9 +29,9 @@ const Home = () => {
 					marginTop: "150px",
 					height: "calc(100vh - 300px)",
 					marginBottom: "150px",
-					border: "2px solid black",
+					border: "0px solid black",
 					overflowY: "scroll",
-					width: "500px",
+					width: "5000px",
 					maxWidth: "100%",
 				}}
 			>
@@ -41,7 +41,7 @@ const Home = () => {
 						<p>Price: {post.price}</p>
 					</div>
 				))}
-				{!posts && <h1>content and shit goes here </h1>}
+				{!posts && <h1>content</h1>}
 
 				<Link to="/createPost" className="floating-button">
 					Create <br />

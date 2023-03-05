@@ -21,50 +21,63 @@ const Footer = () => {
 
   return (
     <div className="footer-wrapper">
-      <div className="footer-container fixed-bottom">
-        <div className="container-fluid bg-hidden">
-          <div className="row justify-content-center">
-            <div className="col-3">
-              <Link to="/" className={getClassNameForLink('/')}>
-                Home
-              </Link>
-            </div>
+      <div className="footer-content">
 
-            <div className="col-3">
-              <button type="button" className={getClassNameForLink('/inbox')}>
-                Inbox
-              </button>
-            </div>
+        <div className="title">
+          <span className="marketmate-title">MarketMate</span>
+        </div>
 
-            <div className="col-3 dropdown">
-              <div className="dropup">
-                <button
-                  className={getClassNameForLink('/me')}
-                  type="button"
-                  id="dropdownMenuButton"
-                  onClick={handleDropdownClick}
-                >
-                  <Link to="/me" style={{ color: 'black' }}>
-                    Profile
-                  </Link>
+        <div className="subtext">
+          Love the site? Buy me a <a href="https://www.redbull.com/us-en/" target="_blank" rel="noopener noreferrer"> <strong>Redbull</strong></a> :)
+        </div>
+
+        <div className="footer-container fixed-bottom">
+          <div className="container-fluid bg-hidden">
+            <div className="row justify-content-center">
+
+              <div className="col-3">
+                <Link to="/" className={getClassNameForLink('/')}>
+                  Home
+                </Link>
+              </div>
+
+              <div className="col-3">
+                <button type="button" className={getClassNameForLink('/inbox')}>
+                  Inbox
                 </button>
               </div>
-            </div>
 
-            <div className="col-3">
-              {Auth.loggedIn() ? (
-                <>
-                  <button className={getClassNameForLink('/logout')} onClick={logout}>
-                    Logout
+              <div className="col-3 dropdown">
+                <div className="dropup">
+                  <button
+                    className={getClassNameForLink('/me')}
+                    type="button"
+                    id="dropdownMenuButton"
+                    onClick={handleDropdownClick}
+                  >
+                    <Link to="/me" style={{ color: 'white' }}>
+                      Profile
+                    </Link>
                   </button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login" className={getClassNameForLink('/login')}>
-                    Login
-                  </Link>
-                </>
-              )}
+                </div>
+              </div>
+
+              <div className="col-3">
+                {Auth.loggedIn() ? (
+                  <>
+                    <button className={getClassNameForLink('/logout')} onClick={logout}>
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/login" className={getClassNameForLink('/login')}>
+                      Login
+                    </Link>
+                  </>
+                )}
+              </div>
+
             </div>
           </div>
         </div>
