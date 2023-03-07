@@ -22,14 +22,14 @@ The app is built with cutting-edge technologies like React, GraphQL, and MongoDB
 
 
 ## Installation
-To install this project you can do the following: ect ect ect, or visit this heroku live deployment.
+To install this project you can do the following: `git clone` on the repo, open the project, right click the client file and select `open in integrated terminal`. Do this likewise on the `server.js` file in the server folder. On the server side you will run `npm i`, `npm run seed` and `node .\server.js`. Then on the client side you will run `npm i`, `npm run build`, and lastly `npm start`. Your browser will open in your default browser allowing you to navigate freely. Alternatively you can visit [Marketmate](https://mighty-falls-75266.herokuapp.com/) for the live deployment.
 
 ## Roadmap
-For Future Devlopment their is plans to encorperate ect.
+There are a lot of plans that we will be integrating into this application. A few on our top priority are allowing users to send messages back and forth to each other, users posts displaying at the top of the home page instead of listing at the bottom, adding a stripe payment form for users to issue payment directly if they choose to do so.
 
 
 ## Usage
-To use Marketmate to its full potential you can...
+Using Marketmate is fairly straightfoward. If it is your first time visiting you can view posts, or log in to create a post yourself. Upon logging in you will be re-routed to the homepage. You can go to the profile page to see your items that you are selling or that have been sold/ view items you've recently favorited. You can also create a new post on the form prompted. Once filled out click submit and your post will be sent back to the homepage.
 
 ## License
 ![MIT](https://img.shields.io/badge/license-MIT-blue)
