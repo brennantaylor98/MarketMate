@@ -48,6 +48,7 @@ function CreatePost() {
 
 			const data = await response.json();
 			console.log(data);
+			window.location.replace('/')
 		} catch (err) {
 			console.log(err);
 		}
