@@ -6,8 +6,8 @@ const Health = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">Health</h2>
+        <div className="container" id="categoryCont">
+            <h2 className="title" id="categoryTitle">Health</h2>
             <div>
                 <div className="card postsCard">
                     <div>

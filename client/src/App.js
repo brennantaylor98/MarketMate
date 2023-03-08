@@ -74,7 +74,7 @@ function App() {
 							<Route path="/category/garden" element={<Garden />} />
 							<Route path="/category/electronics" element={<Electronics />} />
 							<Route path="/category/toys" element={<Toys />} />
-							<Route path="/category/oet-supplies" element={<Pets />} />
+							<Route path="/category/pet-supplies" element={<Pets />} />
 							<Route path="/category/kids" element={<Kids />} />
 							<Route path="/category/vehicles" element={<Vehicles />} />
 							<Route path="/category/health" element={<Health />} />
