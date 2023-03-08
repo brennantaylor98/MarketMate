@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="footer-content">
 
         <div className="title">
-          <span className="marketmate-title">MarketMate</span>
+          <span className="marketmate-title"> 💹      MarketMate</span>
         </div>
 
         <div className="subtext">

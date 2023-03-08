@@ -41,10 +41,11 @@ const Home = () => {
 			Toys
 			</Link>
 			|
+			
 			<Link to="/category/pet-supplies" className="link">
-			Pet Supplies
+			Pet
 			</Link>
-			|
+			| <br></br>
 			<Link to="/category/kids" className="link">
 			Kids
 			</Link>
@@ -64,7 +65,7 @@ const Home = () => {
 			<Link to="/category/hobbies" className="link">
 			Hobbies
 			</Link>
-			|
+			|                
 			<Link to="/category/other" className="link">
 			Other
 			</Link>
