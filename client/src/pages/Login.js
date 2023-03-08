@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
+import "./Login.css"
 
 import Auth from "../utils/auth";
 
@@ -42,7 +43,7 @@ const Login = (props) => {
 			className="d-flex justify-content-center align-items-center"
 			style={{ display: "flex", alignItems: "center" }}
 		>
-			<div className="card">
+			<div className="card" id="loginCard">
 				<h4 className="card-header bg-black text-light p-2">Login</h4>
 				<div className="card-body">
 					{data ? (

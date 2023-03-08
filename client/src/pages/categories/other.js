@@ -6,8 +6,8 @@ const Other = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">Other</h2>
+        <div className="container" id="categoryCont">
+            <h2 className="title" id="categoryTitle">Other</h2>
             <div>
                 <div className="card postsCard">
                     <div>

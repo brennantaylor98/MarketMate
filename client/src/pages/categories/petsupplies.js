@@ -6,8 +6,8 @@ const Pets = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">Pet Supplies</h2>
+        <div className="container" id="categoryCont">
+            <h2 className="title" id="categoryTitle">Pet Supplies</h2>
             <div>
                 <div className="card postsCard">
                     <div>

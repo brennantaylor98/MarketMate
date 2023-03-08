@@ -6,8 +6,8 @@ const Kids = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">Kids</h2>
+        <div className="container" id="categoryCont">
+            <h2 className="title" id="categoryTitle">Kids</h2>
             <div>
                 <div className="card postsCard">
                     <div>

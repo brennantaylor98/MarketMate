@@ -6,8 +6,8 @@ const Garden = () => {
 
 
     return (
-        <div className="container">
-            <h2 className="title">Garden</h2>
+        <div className="container" id="categoryCont">
+            <h2 className="title" id="categoryTitle">Garden</h2>
             <div>
                 <div className="card postsCard">
                     <div>
