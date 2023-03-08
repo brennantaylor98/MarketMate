@@ -1,3 +1,4 @@
+
 {
     "name": "marketmate",
     "version": "1.0.0",
@@ -23,3 +24,5 @@
         "heroku": "^7.68.3"
     }
 }
+  
+

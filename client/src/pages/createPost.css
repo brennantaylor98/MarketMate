@@ -13,6 +13,8 @@
     padding-bottom: 50px;
     margin-bottom: 25px;
     width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form input {

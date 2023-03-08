@@ -21,6 +21,17 @@ import Profile from "./pages/Profile";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CreatePost from "./pages/createPost";
+import Clothing from "./pages/categories/clothing";
+import Garden from "./pages/categories/garden";
+import Electronics from "./pages/categories/electronics";
+import Toys from "./pages/categories/toys";
+import Pets from "./pages/categories/petsupplies";
+import Kids from "./pages/categories/kids";
+import Vehicles from "./pages/categories/vehicles";
+import Health from "./pages/categories/health";
+import Tickets from "./pages/categories/tickets";
+import Hobbies from "./pages/categories/hobbies";
+import Other from "./pages/categories/other";
 
 const httpLink = createHttpLink({
 	uri: "/graphql",
@@ -59,6 +70,17 @@ function App() {
 							<Route path="/me" element={<Profile />} />
 							<Route path="/profiles/:username" element={<Profile />} />
 							<Route path="CreatePost" element={<CreatePost />} />
+							<Route path="/category/clothing" element={<Clothing />} />
+							<Route path="/category/garden" element={<Garden />} />
+							<Route path="/category/electronics" element={<Electronics />} />
+							<Route path="/category/toys" element={<Toys />} />
+							<Route path="/category/oet-supplies" element={<Pets />} />
+							<Route path="/category/kids" element={<Kids />} />
+							<Route path="/category/vehicles" element={<Vehicles />} />
+							<Route path="/category/health" element={<Health />} />
+							<Route path="/category/tickets" element={<Tickets />} />
+							<Route path="/category/hobbies" element={<Hobbies />} />
+							<Route path="/category/other" element={<Other />} />
 						</Routes>
 					</div>
 					<Footer />
