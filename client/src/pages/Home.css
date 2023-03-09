@@ -3,6 +3,7 @@
 }
 
 .link {
+    display: inline-flex;
     color: black;
     padding: 20px;
 }
@@ -10,6 +11,7 @@
 .link:hover {
     color: rgb(25, 3, 194);
     background-color: white;
+    padding: 1px;
 }
 
 .posts-container {
@@ -37,5 +39,28 @@
     background-color: black;
     color: white;
     border: 2px solid white;
+}
+
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  .link {
+    padding: 10px;
+    width: auto;
+  }
+  .favoriteBtn {
+    font-size: 20px;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .catagoryText {
+    width: auto;
+  }
+  .posts-container {
+    height: calc(100vh - 200px);
+    margin-bottom: 100px;
+  }
 }
 
