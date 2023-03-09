@@ -24,10 +24,6 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-content">
 
-        <div className="title">
-          <span className="marketmate-title"> 💹      MarketMate</span>
-        </div>
-
         <div className="footer-container fixed-bottom">
           <div className="container-fluid bg-hidden">
             <div className="row justify-content-center">
