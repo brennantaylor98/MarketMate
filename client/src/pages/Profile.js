@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 
 
 const Profile = () => {
+  const title = localStorage.getItem('title')
+  const price = localStorage.getItem('price')
+
+
   const { username: userParam } = useParams();
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
@@ -35,7 +39,11 @@ const Profile = () => {
     <div style= {{ height:'500px' }}>
       <main style={{ paddingTop: '100px' }}>
       <h2>Recently Liked Items</h2>
-      <div style={{border: '1px solid black', padding: '150px'}}>
+      <div className="card postsCard" >
+        <div>
+          <h2 className="postTitle">{title}</h2>
+          <p className="postPrice">{price}</p>
+        </div>
       </div>
       </main>
       <main style={{ paddingTop: '100px' }}>
