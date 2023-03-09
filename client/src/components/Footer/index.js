@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Auth from '../../utils/auth';
+import "./footer.css"
 
 const Footer = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -25,10 +26,6 @@ const Footer = () => {
 
         <div className="title">
           <span className="marketmate-title"> 💹      MarketMate</span>
-        </div>
-
-        <div className="subtext">
-          Love the site? Buy me a <a href="https://www.redbull.com/us-en/" target="_blank" rel="noopener noreferrer"> <strong>Redbull</strong></a> :)
         </div>
 
         <div className="footer-container fixed-bottom">
@@ -61,6 +58,7 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
+              
 
               <div className="col-3">
                 {Auth.loggedIn() ? (
@@ -83,7 +81,10 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    
+
   );
+  
 };
 
 export default Footer;
