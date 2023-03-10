@@ -29,7 +29,7 @@ const Profile = () => {
   if (!user?.username) {
     return (
       <div style={{ border: '2px solid black', textAlign: 'center', marginTop: '50vh' }}>
-        <h1>You need to log in to see this shit</h1>
+        <h1>You must log in to see this.</h1>
       </div>
     );
   }
