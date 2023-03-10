@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+
 
 const Home = () => {
   const btn = document.getElementsByClassName('favortieBtn')
@@ -25,6 +26,7 @@ const Home = () => {
     console.log("posts", posts);
   }, []);
 
+  let navigate = useNavigate()
 
   const clickHandler = (event) => {
 	event.preventDefault()
@@ -39,7 +41,8 @@ const Home = () => {
 	event.target.style.backgroundColor = "red" 
 	
 
-	window.location.replace('/me')
+	let path = `/me`; 
+    navigate(path);
   }
 
   return (
