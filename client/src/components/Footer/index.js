@@ -34,7 +34,7 @@ const Footer = () => {
                 </Link>
               </div>
 
-              <div className="col-3">
+              <div className="col-3 ">
                 <button type="button" className={getClassNameForLink('/inbox')}>
                   Inbox
                 </button>
