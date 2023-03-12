@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./mainC.css"
 
 
 const Other = () => {
+    let navigate = useNavigate()
+
     const clickHandler = (event) => {
         event.preventDefault()
     
@@ -15,8 +18,8 @@ const Other = () => {
     
         event.target.style.backgroundColor = "red" 
         
-    
-        window.location.replace('/me')
+        let path = `/me`; 
+        navigate(path);
     }
 
     return (
