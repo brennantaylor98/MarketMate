@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Tickets = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

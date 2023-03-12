@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Garden = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

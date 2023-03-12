@@ -7,6 +7,7 @@ const Clothing = () => {
     let navigate = useNavigate()
 
     const clickHandler = (event) => {
+        
         event.preventDefault()
     
         const title = event.target.parentElement.previousElementSibling.children[0].textContent

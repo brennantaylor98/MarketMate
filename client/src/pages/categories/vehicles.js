@@ -4,7 +4,9 @@ import "./mainC.css"
 
 
 const Vehicles = () => {
+
     let navigate = useNavigate()
+    
     const clickHandler = (event) => {
         event.preventDefault()
     

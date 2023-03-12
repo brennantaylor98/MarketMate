@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Other = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

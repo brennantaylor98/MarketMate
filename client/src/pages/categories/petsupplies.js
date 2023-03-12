@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Pets = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

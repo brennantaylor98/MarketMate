@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Toys = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Hobbies = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Kids = () => {
+    
     let navigate = useNavigate()
 
     const clickHandler = (event) => {

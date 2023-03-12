@@ -4,6 +4,7 @@ import "./mainC.css"
 
 
 const Health = () => {
+    
     let navigate = useNavigate()
     
     const clickHandler = (event) => {
