@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./mainC.css"
 
 
 const Clothing = () => {
+    let navigate = useNavigate()
+
     const clickHandler = (event) => {
+        
         event.preventDefault()
     
         const title = event.target.parentElement.previousElementSibling.children[0].textContent
@@ -16,7 +20,8 @@ const Clothing = () => {
         event.target.style.backgroundColor = "red" 
         
     
-        window.location.replace('/me')
+        let path = `/me`; 
+        navigate(path);
     }
 
 

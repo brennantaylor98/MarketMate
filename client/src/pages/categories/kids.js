@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./mainC.css"
 
 
 const Kids = () => {
+    
+    let navigate = useNavigate()
+
     const clickHandler = (event) => {
         event.preventDefault()
     
@@ -15,8 +19,8 @@ const Kids = () => {
     
         event.target.style.backgroundColor = "red" 
         
-    
-        window.location.replace('/me')
+        let path = `/me`; 
+        navigate(path);
     }
 
     return (

@@ -43,6 +43,7 @@ const Home = () => {
 
 	let path = `/me`; 
     navigate(path);
+	
   }
 
   return (
